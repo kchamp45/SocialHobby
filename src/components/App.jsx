@@ -14,16 +14,17 @@ function App(){
   return (
     <div>
       <Header/>
-        <Switch>
-          <Route exact path='/' component={NavBar} />
-          <Route path='/newcomment' component={NewCommentForm}/>
-          <Route path='/comments' component={CommentList}/>
-        </Switch>
+      <Switch>
+        <Route exact path='/' component={NavBar} />
+        <Route path='/newcomment' component={NewCommentForm}/>
+        <Route path='/comments' component={CommentList}/>
+      </Switch>
       <Tweets/>
       <Search/>
       <User/>
-      <Biography/>    
+      <Biography/>
       <OtherUserList/>
+
     </div>
 
   );
