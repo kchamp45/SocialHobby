@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function NavBar(){
   var NavBarStyles = {
@@ -8,9 +9,7 @@ function NavBar(){
   };
   return (
     <nav>
-      <span style={NavBarStyles}>Home</span>
-      <span style={NavBarStyles}>Notifications</span>
-      <span style={NavBarStyles}>Messages</span>
+      <Link style={NavBarStyles} to="/">Home</Link> <Link style={NavBarStyles}  to="/newcomment">Add Comment</Link> <Link style={NavBarStyles} to="/comments">Comments</Link>
     </nav>
   );
 }
