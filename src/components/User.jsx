@@ -6,7 +6,7 @@ function User (){
   return (
     <div>
       <img src={susie}/>&nbsp;
-        <style jsx>{`
+      <style jsx>{`
             img {
               height: 40px;
               width: 25px;
@@ -22,12 +22,12 @@ function User (){
         `}</style>
 
       <h3 className="current-user">Susie Humbold</h3>
-        <style jsx>{`
+      <style jsx>{`
           .current-user {
             color: red;
           }
       `}</style>
-    <Link to="/tweets">Tweets</Link>&nbsp;&nbsp;
+      <Link to="/tweets">Tweets</Link>&nbsp;&nbsp;
       <Link to="/followers">Followers</Link>&nbsp;&nbsp;
       <Link to="/following">Following</Link>&nbsp;&nbsp;
 

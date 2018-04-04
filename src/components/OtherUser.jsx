@@ -11,7 +11,7 @@ function OtherUser(props) {
       <h4>{props.image}</h4>
       <h3>{props.name}</h3>
       <button>{props.button}</button>
-        <style jsx>{`
+      <style jsx>{`
           button {
             background-color: #1a75ff;
             color: white;

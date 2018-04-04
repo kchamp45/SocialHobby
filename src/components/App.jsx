@@ -9,6 +9,8 @@ import Biography from './Biography';
 import OtherUserList from './OtherUserList';
 import { Switch, Route } from 'react-router-dom';
 import NewCommentForm from './NewCommentForm';
+import Error404 from './Error404';
+import NewCommentControl from './NewCommentControl';
 
 function App(){
   return (
@@ -16,8 +18,9 @@ function App(){
       <Header/>
       <Switch>
         <Route exact path='/' component={NavBar} />
-        <Route path='/newcomment' component={NewCommentForm}/>
+        <Route path='/newcomment' component={NewCommentControl}/>
         <Route path='/comments' component={CommentList}/>
+        <Route component={Error404}/>
       </Switch>
       <Tweets/>
       <Search/>

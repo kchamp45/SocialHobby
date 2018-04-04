@@ -2,22 +2,22 @@ import React from 'react';
 import OtherUser from './OtherUser';
 
 var otherUser = [
-{
-  image: 'image1',
-  name: 'Trump',
-  button: 'button'
+  {
+    image: 'image1',
+    name: 'Trump',
+    button: 'button'
 
-},
-{
-  image: 'image2',
-  name: 'Obama',
-  button: 'button'
-},
-{
-  image: 'image3',
-  name: 'Carter',
-  button: 'button'
-}
+  },
+  {
+    image: 'image2',
+    name: 'Obama',
+    button: 'button'
+  },
+  {
+    image: 'image3',
+    name: 'Carter',
+    button: 'button'
+  }
 ];
 
 function OtherUserList() {

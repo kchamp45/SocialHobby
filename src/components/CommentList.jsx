@@ -1,5 +1,6 @@
 import React from 'react';
 import Comment from './Comment';
+import PropTypes from 'prop-types';
 
 var userComments = [
   {
@@ -19,7 +20,7 @@ var userComments = [
   }
 ];
 
-function CommentList() {
+function CommentList(props) {
   var CommentListStyles = {
     border: '5px solid gray',
     padding: '10px',
@@ -35,8 +36,13 @@ function CommentList() {
           comment={comment.comment}
           key={index}/>
       )}
+      <button onClick={props.onAddCommentClick}>Add a comment</button>
     </div>
   );
 }
+
+CommentList.propTypes = {
+  onAddCommentClick: PropTypes.func
+};
 
 export default CommentList;
