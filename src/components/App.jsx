@@ -8,29 +8,44 @@ import User from './User';
 import Biography from './Biography';
 import OtherUserList from './OtherUserList';
 import { Switch, Route } from 'react-router-dom';
-import NewCommentForm from './NewCommentForm';
 import Error404 from './Error404';
 import NewCommentControl from './NewCommentControl';
 
-function App(){
-  return (
-    <div>
-      <Header/>
-      <Switch>
-        <Route exact path='/' component={NavBar} />
-        <Route path='/newcomment' component={NewCommentControl}/>
-        <Route path='/comments' component={CommentList}/>
-        <Route component={Error404}/>
-      </Switch>
-      <Tweets/>
-      <Search/>
-      <User/>
-      <Biography/>
-      <OtherUserList/>
+class App extends React.Component {
 
-    </div>
+  constructor(props) {
+    super(props);
+    this.state = {
+      masterCommentList: []
+    };
+    this.handleAddingNewCommentToList = this.handleAddingNewCommentToList.bind(this);
+  }
 
-  );
+  handleAddingNewCommentToList(newComment) {
+    var newMasterCommentList = this.state.masterCommentList.slice();
+    newMasterCommentList.push(newComment);
+    this.setState({masterCommentList: newMasterCommentList});
+
+  }
+
+  render(){
+    return (
+      <div>
+        <Header/>
+        <NavBar/>
+        <Switch>
+          <Route exact path='/' render={()=><CommentList commentList={this.state.masterCommentList} />} />
+          <Route path='/newcomment' render={()=><NewCommentControl onNewCommentCreation={this.handleAddingNewCommentToList}/>} />
+          <Route component={Error404}/>
+        </Switch>
+        <Tweets/>
+        <Search/>
+        <User/>
+        <Biography/>
+        <OtherUserList/>
+      </div>
+    );
+  }
 }
 
 export default App;

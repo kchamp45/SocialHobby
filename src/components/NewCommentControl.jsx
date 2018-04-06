@@ -1,6 +1,7 @@
 import React from 'react';
 import NewCommentForm from './NewCommentForm';
-import CommentList from './CommentList';
+import Questions from './Questions';
+import PropTypes from 'prop-types';
 
 class NewCommentControl extends React.Component {
 
@@ -19,9 +20,9 @@ class NewCommentControl extends React.Component {
   render(){
     let currentVisibleContent = null;
     if (this.state.formVisibleOnPage) {
-      currentVisibleContent = <NewCommentForm/>;
+      currentVisibleContent = <NewCommentForm onNewCommentCreation={this.props.onNewCommentCreation}/>;
     } else {
-      currentVisibleContent = <CommentList onAddCommentClick={this.handleAddNewComment}/>;
+      currentVisibleContent = <Questions onAddNewComment={this.handleAddNewComment}/>;
     }
     return (
       <div>
@@ -30,5 +31,9 @@ class NewCommentControl extends React.Component {
     );
   }
 }
+
+NewCommentControl.propTypes = {
+  onNewCommentCreation: PropTypes.func
+};
 
 export default NewCommentControl;
