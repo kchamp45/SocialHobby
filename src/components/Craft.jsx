@@ -8,8 +8,8 @@ function Craft(props) {
 
   return(
     <div>
-      <h2>{props.title}</h2>
-      <h3 style={CraftStyles}>{props.poster}</h3>
+      <h3>{props.title}</h3>
+      <h4 style={CraftStyles}>{props.poster}</h4>
       <h4>{props.date}</h4>
       <p><em>{props.instructions}</em></p>
       <hr/>

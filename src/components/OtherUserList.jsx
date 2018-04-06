@@ -1,20 +1,22 @@
 import React from 'react';
 import OtherUser from './OtherUser';
+import trump from '../assets/images/Trump.jpg';
+import obama from '../assets/images/Obama.jpg';
+import carter from '../assets/images/Carter.jpg';
 
 var otherUser = [
   {
-    image: 'image1',
+    image: <img src={trump} width='45px' height='60px'/>,
     name: 'Trump',
     button: 'button'
-
   },
   {
-    image: 'image2',
+    image: <img src={obama} width='45px' height='60px'/>,
     name: 'Obama',
     button: 'button'
   },
   {
-    image: 'image3',
+    image: <img src={carter} width='45px' height='60px'/>,
     name: 'Carter',
     button: 'button'
   }
@@ -25,10 +27,12 @@ function OtherUserList() {
     border: '5px solid gray',
     padding: '10px',
     margin: '10px 5px 10px 5px',
+    backgroundColor: 'tan'
   };
 
   return (
     <div style={OtherListStyles}>
+      <h1>Group Members:</h1>
       {otherUser.map((otherUser, index) =>
         <OtherUser image={otherUser.image}
           name={otherUser.name}

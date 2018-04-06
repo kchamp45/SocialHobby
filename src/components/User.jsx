@@ -6,10 +6,10 @@ function User (){
   return (
     <div>
       <img src={susie}/>&nbsp;
-      <style jsx>{`
+        <style jsx>{`
             img {
-              height: 40px;
               width: 25px;
+              height: 40px;
               float: left;
             }
           `}</style>
@@ -17,7 +17,7 @@ function User (){
           div {
             background: linear-gradient(blue, white);
             border: 5px solid gray;
-            margin-top: 20px;
+            margin-top: 40px;
           }
         `}</style>
 

@@ -27,6 +27,7 @@ function CraftList() {
 
   return (
     <div style={CraftListStyles}>
+      <h1>Craft Ideas</h1>
       {masterCraftList.map((idea, index) =>
         <Craft title={idea.title}
           poster={idea.poster}

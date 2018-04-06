@@ -8,7 +8,7 @@ function OtherUser(props) {
 
   return(
     <div style={UserStyles}>
-      <h4>{props.image}</h4>
+      <h3>{props.image}</h3>
       <h3>{props.name}</h3>
       <button>{props.button}</button>
       <style jsx>{`
@@ -23,7 +23,7 @@ function OtherUser(props) {
 }
 
 OtherUser.propTypes = {
-  image: PropTypes.string.isRequired,
+  image: PropTypes.element.isRequired,
   name: PropTypes.string.isRequired,
   button: PropTypes.string
 };

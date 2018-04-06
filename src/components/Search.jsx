@@ -5,8 +5,10 @@ function Search (){
     float: 'right',
     marginRight: '5px',
     borderRadius: '25px',
-    border: '2px solid #0080ff'
-
+    border: '2px solid #0080ff',
+    height: '25px',
+    width: '20%',
+    marginBottom: '20%'
   };
   return (
     <div>

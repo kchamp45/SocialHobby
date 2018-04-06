@@ -7,10 +7,11 @@ function Biography (){
           div {
             border: 5px solid gray;
             margin-top: 20px;
-            background-color: tan;
+            background: linear-gradient(white, gray);
           }
         `}</style>
-      <p><em>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus a ipsum quis ex tempor imperdiet. Fusce porta mi a lectus facilisis, nec consequat ante luctus. Donec neque nunc, tincidunt in volutpat sit amet, dictum ut est. Maecenas bibendum commodo magna non eleifend. Vivamus maximus auctor justo et congue. Pellentesque aliquam dapibus nisi vitae sollicitudin. Aliquam lobortis erat vitae odio malesuada, in scelerisque erat vehicula. Cras venenatis libero quis erat semper luctus. Integer porta mauris ut quam fermentum ultrices. Sed eget nibh sed ligula gravida tincidunt eu sed nibh. Nam dignissim, dui sit amet laoreet faucibus, tortor leo tempus enim, eget sollicitudin libero arcu nec urna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam aliquam arcu sit amet sagittis imperdiet.</em></p>
+      <h3>Profile</h3>
+      <p><em>I am a paralegal at Blackwell Sanders LLP.  On my spare time, I love to try out new recipes and sew home decor items, such as pillows and window treatments.  I enjoy sewing so much that I made every decorative item in my house.  Well, almost everything.  I am always looking for new ideas, so if you have something to share, please post!</em></p>
     </div>
   );
 }

@@ -17,7 +17,8 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      masterCommentList: []
+      masterCommentList: [
+      ]
     };
     this.handleAddingNewCommentToList = this.handleAddingNewCommentToList.bind(this);
   }
@@ -43,7 +44,7 @@ class App extends React.Component {
           <Route path='/newcomment' render={()=><NewCommentControl onNewCommentCreation={this.handleAddingNewCommentToList}/>} />
           <Route path='/craft' component={CraftList}/>
           <Route component={Error404}/>
-        </Switch>  
+        </Switch>
         <OtherUserList/>
       </div>
     );
