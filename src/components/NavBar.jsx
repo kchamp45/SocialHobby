@@ -9,7 +9,7 @@ function NavBar(){
   };
   return (
     <nav>
-      <Link style={NavBarStyles} to="/">Home</Link> <Link style={NavBarStyles}  to="/newcomment">Add Comment</Link> <Link style={NavBarStyles} to="/comments">Comments</Link>
+      <Link style={NavBarStyles} to="/">Home</Link> <Link style={NavBarStyles}  to="/newcomment">Add Comment</Link> <Link style={NavBarStyles} to="/craft">Craft Ideas</Link>
     </nav>
   );
 }
