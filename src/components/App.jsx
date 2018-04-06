@@ -18,6 +18,8 @@ class App extends React.Component {
     super(props);
     this.state = {
       masterCommentList: [
+      ],
+      masterCraftList: [
       ]
     };
     this.handleAddingNewCommentToList = this.handleAddingNewCommentToList.bind(this);
@@ -36,7 +38,7 @@ class App extends React.Component {
         <Header/>
         <NavBar/>
         <Tweets/>
-        <Search/>
+        <Search craftList={this.state.masterCraftList}/>
         <User/>
         <Biography/>
         <Switch>

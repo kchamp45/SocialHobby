@@ -12,11 +12,12 @@ function CommentList(props) {
 
   return (
     <div style={CommentListStyles}>
-      {props.commentList.map((comment, index) =>
-        <Comment time={comment.time}
+      <h3>Comments:</h3>
+      {props.commentList.map((comment) =>
+        <Comment time={comment.time + ' ' + 'ago'}
           name={comment.name}
           comment={comment.comment}
-          key={index}/>
+          key={comment.id}/>
       )}
 
     </div>

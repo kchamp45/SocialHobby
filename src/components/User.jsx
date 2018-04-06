@@ -5,28 +5,25 @@ import { Link } from 'react-router-dom';
 function User (){
   return (
     <div>
-      <img src={susie}/>&nbsp;
-        <style jsx>{`
-            img {
-              width: 25px;
-              height: 40px;
-              float: left;
-            }
-          `}</style>
+      <img src={susie}/>
       <style jsx>{`
           div {
             background: linear-gradient(blue, white);
             border: 5px solid gray;
-            margin-top: 40px;
+            padding: 10px;
+            margin: 20px 10px 10px 0;
+          }
+          img {
+          width: 60px;
+          height: 80px;
+          }
+          h3 {
+            color: red;
+            margin-top: 10px;
           }
         `}</style>
 
-      <h3 className="current-user">Susie Humbold</h3>
-      <style jsx>{`
-          .current-user {
-            color: red;
-          }
-      `}</style>
+      <h3>Susie Humbold</h3>
       <Link to="/tweets">Tweets</Link>&nbsp;&nbsp;
       <Link to="/followers">Followers</Link>&nbsp;&nbsp;
       <Link to="/following">Following</Link>&nbsp;&nbsp;

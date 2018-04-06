@@ -32,7 +32,7 @@ function OtherUserList() {
 
   return (
     <div style={OtherListStyles}>
-      <h1>Group Members:</h1>
+      <h3>Group Members:</h3>
       {otherUser.map((otherUser, index) =>
         <OtherUser image={otherUser.image}
           name={otherUser.name}

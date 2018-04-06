@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { v4 } from 'uuid';
 
 function NewCommentForm(props){
   let _time = null;
@@ -8,7 +9,7 @@ function NewCommentForm(props){
 
   function handleNewCommentFormSubmission(event){
     event.preventDefault();
-    props.onNewCommentCreation({time: _time.value, name: _name.value, comment: _comment.value});
+    props.onNewCommentCreation({time: _time.value, name: _name.value, comment: _comment.value, id: v4()});
     _time.value = '';
     _name.value = '';
     _comment.value = '';

@@ -5,7 +5,8 @@ function NavBar(){
   var NavBarStyles = {
     border: '2px solid gray',
     padding: '10px',
-    color: 'gray'
+    color: 'gray',
+    backgroundColor: '#00ff80'
   };
   return (
     <nav>
