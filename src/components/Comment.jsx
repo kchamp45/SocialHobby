@@ -2,15 +2,30 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function Comment(props) {
+
   var CommentStyles = {
     color: 'blue'
   };
 
+  let count = 0;
+  let dislike = 0;
+  function handleLike() {
+    count++;
+    console.log(count);
+  }
+
+  function handleDislike() {
+    dislike++;
+    console.log(dislike);
+  }
   return(
     <div>
       <h4>{props.time}</h4>
       <h3 style={CommentStyles}>{props.name}</h3>
       <p><em>{props.comment}</em></p>
+      <button onClick={handleLike}>Like</button>
+      <button onClick={handleDislike}>Dislike</button>
+      <p>{count}</p>
       <hr/>
     </div>
   );
@@ -19,7 +34,7 @@ function Comment(props) {
 Comment.propTypes = {
   name: PropTypes.string.isRequired,
   time: PropTypes.string.isRequired,
-  comment: PropTypes.string
+  comment: PropTypes.string,
 };
 
 export default Comment;

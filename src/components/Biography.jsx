@@ -7,7 +7,7 @@ function Biography (){
           div {
             border: 5px solid gray;
             margin-top: 20px;
-            background: linear-gradient(white, gray);
+            background: linear-gradient(white, #ff99ff);
           }
         `}</style>
       <h3>Profile</h3>

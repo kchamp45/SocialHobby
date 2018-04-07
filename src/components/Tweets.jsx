@@ -6,9 +6,9 @@ function Tweets (){
   function handleEnterKeyPress(event) {
     if(event.key == 'Enter') {
       if(_tweet.value == 'hobby'){
-      console.log(_tweet.value);
+      alert(_tweet.value);
       }else {
-      console.log('Sorry no result match your term.  Try again.');
+      alert('Sorry no result match your term.  Try again.');
       }
       _tweet.value = '';
     }

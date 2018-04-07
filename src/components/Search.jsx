@@ -7,12 +7,12 @@ function Search () {
   function handleEnterKeyPress(event) {
     if(event.key == 'Enter') {
       if(_search.value == 'snapchat'){
-      console.log(_search.value);
+      alert(_search.value);
       }else {
-        console.log('Sorry no result match your search term.  Try again.');
+      alert('Sorry no result match your search term.  Try again.');
       }
       _search.value = '';
-    }  
+    }
   }
 
 var SearchStyles = {

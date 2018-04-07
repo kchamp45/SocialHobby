@@ -11,6 +11,7 @@ import { Switch, Route } from 'react-router-dom';
 import Error404 from './Error404';
 import NewCommentControl from './NewCommentControl';
 import CraftList from './CraftList';
+import FollowerList from './FollowerList';
 
 class App extends React.Component {
 
@@ -45,6 +46,7 @@ class App extends React.Component {
           <Route exact path='/' render={()=><CommentList commentList={this.state.masterCommentList} />} />
           <Route path='/newcomment' render={()=><NewCommentControl onNewCommentCreation={this.handleAddingNewCommentToList}/>} />
           <Route path='/craft' component={CraftList}/>
+          <Route path='/followers' component={FollowerList}/>
           <Route component={Error404}/>
         </Switch>
         <OtherUserList/>

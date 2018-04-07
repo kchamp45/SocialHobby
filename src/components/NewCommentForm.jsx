@@ -6,10 +6,11 @@ function NewCommentForm(props){
   let _time = null;
   let _name = null;
   let _comment = null;
+  let vote = null;
 
   function handleNewCommentFormSubmission(event){
     event.preventDefault();
-    props.onNewCommentCreation({time: _time.value, name: _name.value, comment: _comment.value, id: v4()});
+    props.onNewCommentCreation({time: _time.value, name: _name.value, comment: _comment.value, id: v4()}, vote: 'like');
     _time.value = '';
     _name.value = '';
     _comment.value = '';

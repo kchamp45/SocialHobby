@@ -7,7 +7,10 @@ function Header(){
     marginBottom: '30px'
   };
   return (
-    <h1 style={HeaderStyles}>Share Your Hobby</h1>
+    <div style={HeaderStyles}>
+      <h1>HobNob</h1>
+      <p>Share your hobby</p>
+    </div>
   );
 }
 
