@@ -1,23 +1,29 @@
 import React from 'react';
 import OtherUser from './OtherUser';
-import trump from '../assets/images/Trump.jpg';
-import obama from '../assets/images/Obama.jpg';
-import carter from '../assets/images/Carter.jpg';
+import melania from '../assets/images/Melania.jpg';
+import michelle from '../assets/images/Michelle.jpg';
+import rosalynn from '../assets/images/Rosalynn.jpg';
+import laura from '../assets/images/Laura.jpg'
 
 var otherUser = [
   {
-    image: <img src={trump} width='45px' height='60px'/>,
-    name: 'Trump',
+    image: <img src={melania} width='50px' height='60px'/>,
+  name: 'Melania',
     button: 'button'
   },
   {
-    image: <img src={obama} width='45px' height='60px'/>,
-    name: 'Obama',
+    image: <img src={michelle} width='50px' height='60px'/>,
+  name: 'Michelle',
     button: 'button'
   },
   {
-    image: <img src={carter} width='45px' height='60px'/>,
-    name: 'Carter',
+    image: <img src={laura} width='50px' height='60px'/>,
+  name: 'Laura',
+    button: 'button'
+  },
+  {
+    image: <img src={rosalynn} width='50px' height='60px'/>,
+  name: 'Rosalynn',
     button: 'button'
   }
 ];

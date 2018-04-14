@@ -18,7 +18,7 @@ function Tweets (){
     borderRadius: '25px',
     border: '2px solid #0080ff',
     height: '25px',
-    width: '200px'
+    width: '300px'
   };
 
   return (
