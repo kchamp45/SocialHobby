@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 
 function CommentList(props) {
   var CommentListStyles = {
-    border: '5px solid gray',
+    border: '2px solid gray',
     padding: '10px',
-    margin: '10px 5px 10px 5px',
+    margin: '10px 20px 10px 5px',
     backgroundColor: '#e6f2ff'
   };
 
@@ -19,7 +19,6 @@ function CommentList(props) {
           comment={comment.comment}
           key={comment.id}/>
       )}
-
     </div>
   );
 }

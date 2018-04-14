@@ -4,10 +4,10 @@ import PropTypes from 'prop-types';
 
 function CraftList() {
   var CraftListStyles = {
-    border: '5px solid gray',
+    border: '2px solid gray',
     padding: '10px',
-    margin: '10px 5px 10px 5px',
-    backgroundColor: '#e6f2ff'
+    margin: '10px 20px 10px 5px',
+    backgroundColor: '#e6f2ff',
   };
 
   var masterCraftList = [

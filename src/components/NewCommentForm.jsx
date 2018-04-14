@@ -20,7 +20,7 @@ function NewCommentForm(props){
     <div>
       <style jsx>{`
         input {
-          width: 30%;
+          width: 50%;
           height: 25px;
           border: 2px solid green;
           margin-top: 20px;
@@ -61,6 +61,7 @@ function NewCommentForm(props){
 
 NewCommentForm.propTypes = {
   onNewCommentCreation: PropTypes.func
+
 };
 
 export default NewCommentForm;

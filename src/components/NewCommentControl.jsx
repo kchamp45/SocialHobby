@@ -8,13 +8,13 @@ class NewCommentControl extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      formVisibleOnPage: false
+      formVisibleOnPage: true
     };
     this.handleAddNewComment = this.handleAddNewComment.bind(this);
   }
 
   handleAddNewComment(){
-    this.setState({formVisibleOnPage: true});
+    this.setState({formVisibleOnPage: false});
   }
 
   render(){
@@ -22,7 +22,7 @@ class NewCommentControl extends React.Component {
     if (this.state.formVisibleOnPage) {
       currentVisibleContent = <NewCommentForm onNewCommentCreation={this.props.onNewCommentCreation}/>;
     } else {
-      currentVisibleContent = <Questions onAddNewComment={this.handleAddNewComment}/>;
+      currentVisibleContent = <NewCommentForm onAddNewComment={this.handleAddNewComment}/>;
     }
     return (
       <div>

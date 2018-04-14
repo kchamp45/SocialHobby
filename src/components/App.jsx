@@ -36,20 +36,46 @@ class App extends React.Component {
   render(){
     return (
       <div>
+        <style jsx>{`
+          .parentContainer {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-items: flex-start;
+          }
+          .container1 {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+          }
+          .container2 {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            align-items: flex-start;
+            width: 75%;
+          }
+        `}</style>
         <Header/>
-        <NavBar/>
-        <Tweets/>
-        <Search craftList={this.state.masterCraftList}/>
-        <User/>
-        <Biography/>
-        <Switch>
-          <Route exact path='/' render={()=><CommentList commentList={this.state.masterCommentList} />} />
-          <Route path='/newcomment' render={()=><NewCommentControl onNewCommentCreation={this.handleAddingNewCommentToList}/>} />
-          <Route path='/craft' component={CraftList}/>
-          <Route path='/followers' component={FollowerList}/>
-          <Route component={Error404}/>
-        </Switch>
-        <OtherUserList/>
+        <div className="container1">
+          <NavBar/>
+          <Search craftList={this.state.masterCraftList}/>
+          <Tweets/>
+        </div>
+        <div className="parentContainer">
+          <div className="container2">
+            <User/>
+            <Switch>
+              <Route exact path='/' render={()=><CommentList commentList={this.state.masterCommentList} />} />
+              <Route path='/newcomment' render={()=><NewCommentControl onNewCommentCreation={this.handleAddingNewCommentToList}/>} />
+              <Route path='/craft' component={CraftList}/>
+              <Route path='/followers' component={FollowerList}/>
+              <Route component={Error404}/>
+            </Switch>
+          </div>
+          <OtherUserList/>
+        </div>
       </div>
     );
   }

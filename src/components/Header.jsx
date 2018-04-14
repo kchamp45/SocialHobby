@@ -10,6 +10,7 @@ function Header(){
     <div style={HeaderStyles}>
       <h1>HobNob</h1>
       <p>Share your hobby</p>
+      <hr/>
     </div>
   );
 }

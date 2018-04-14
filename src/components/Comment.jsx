@@ -18,6 +18,7 @@ function Comment(props) {
     dislike++;
     console.log(dislike);
   }
+  
   return(
     <div>
       <h4>{props.time}</h4>

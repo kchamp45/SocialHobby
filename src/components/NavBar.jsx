@@ -6,7 +6,7 @@ function NavBar(){
     border: '2px solid gray',
     padding: '10px',
     color: 'gray',
-    backgroundColor: '#00ff80'
+    backgroundColor: '#e6f7ff',
   };
   return (
     <nav>

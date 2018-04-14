@@ -5,9 +5,9 @@ function Biography (){
     <div>
       <style jsx>{`
           div {
-            border: 5px solid gray;
             margin-top: 20px;
-            background: linear-gradient(white, #ff99ff);
+            padding: 10px;
+            background: linear-gradient(white, #b3e6ff);
           }
         `}</style>
       <h3>Profile</h3>
