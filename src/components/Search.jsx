@@ -20,7 +20,7 @@ var SearchStyles = {
     border: '2px solid #0080ff',
     height: '25px',
     width: '200px',
-    marginLeft: '20px',
+    marginLeft: '780px',
     marginRight: '20px',
   }
   return (

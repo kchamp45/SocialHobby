@@ -12,6 +12,7 @@ import Error404 from './Error404';
 import NewCommentControl from './NewCommentControl';
 import CraftList from './CraftList';
 import FollowerList from './FollowerList';
+import Moment from 'moment';
 
 class App extends React.Component {
 
@@ -28,9 +29,26 @@ class App extends React.Component {
 
   handleAddingNewCommentToList(newComment) {
     var newMasterCommentList = this.state.masterCommentList.slice();
+    newComment.formattedElapsedTime = (newComment.timePost).fromNow(true)
     newMasterCommentList.push(newComment);
     this.setState({masterCommentList: newMasterCommentList});
 
+  }
+
+  componentDidMount() {
+    this.elapsedTimeUpdateTimer = setInterval(() => this.updateCommentElapsedTime(), 60000);
+  }
+
+  updateCommentElapsedTime() {
+    console.log("check");
+    let newMasterCommentList = this.state.masterCommentList.slice();
+    newMasterCommentList.forEach((comment) =>
+    comment.formattedElapsedTime = (comment.timePost).fromNow(true));
+    this.setState({masterCommentList: newMasterCommentList})
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.elapsedTimeUpdateTimer);
   }
 
   render(){

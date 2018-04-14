@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { v4 } from 'uuid';
+import Moment from 'moment';
 
 function NewCommentForm(props){
   let _time = null;
@@ -10,8 +11,7 @@ function NewCommentForm(props){
 
   function handleNewCommentFormSubmission(event){
     event.preventDefault();
-    props.onNewCommentCreation({time: _time.value, name: _name.value, comment: _comment.value, id: v4()}, vote: 'like');
-    _time.value = '';
+    props.onNewCommentCreation({name: _name.value, comment: _comment.value, id: v4(), timePost: new Moment(), vote: 'like'});
     _name.value = '';
     _comment.value = '';
   }
@@ -20,13 +20,13 @@ function NewCommentForm(props){
     <div>
       <style jsx>{`
         input {
-          width: 50%;
+          width: auto;
           height: 25px;
           border: 2px solid green;
           margin-top: 20px;
         }
         textarea {
-          width: 61%;
+          width: auto;
           height: 35px;
           border: 2px solid green;
           margin-top: 10px;
@@ -39,11 +39,6 @@ function NewCommentForm(props){
         }
       `}</style>
       <form onSubmit={handleNewCommentFormSubmission}>
-        <input
-          type='text'
-          id='time'
-          placeholder='time'
-          ref={(input) => {_time = input;}}/>&nbsp;
         <input
           type='text'
           id='name'
