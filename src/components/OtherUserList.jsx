@@ -30,8 +30,9 @@ var otherUser = [
 
 function OtherUserList() {
   var OtherListStyles = {
-    padding: '10px',
-    backgroundColor: '#ffffcc'
+    padding: '20px',
+    backgroundColor: '#ffffcc',
+    width: '21%'
   };
 
   return (

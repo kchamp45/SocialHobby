@@ -11,7 +11,7 @@ function User (){
           div {
             background: linear-gradient(blue, white);
             padding: 10px;
-            margin-right: 20px;
+            margin-right: 10px;
           }
           img {
           width: 60px;

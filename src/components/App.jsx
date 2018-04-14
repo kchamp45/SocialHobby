@@ -72,7 +72,6 @@ class App extends React.Component {
             flex-wrap: nowrap;
             justify-content: flex-start;
             align-items: flex-start;
-            width: 75%;
           }
         `}</style>
         <Header/>

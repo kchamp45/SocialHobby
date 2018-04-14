@@ -4,10 +4,6 @@ import Moment from 'moment';
 
 function Comment(props) {
 
-  var CommentStyles = {
-    color: 'blue'
-  };
-
   let count = 0;
   let dislike = 0;
   function handleLike() {
@@ -22,10 +18,23 @@ function Comment(props) {
 
   return(
     <div>
+      <style jsx>{`
+        h3 {
+          color: blue;
+        }
+        div {
+          background-color: #e6f2ff;
+          padding: 10px;
+        }
+        button {
+          background-color: pink;
+        }
+      `}
+      </style>
       <h4>{props.formattedElapsedTime}</h4>
-      <h3 style={CommentStyles}>{props.name}</h3>
+      <h3>{props.name}</h3>
       <p><em>{props.comment}</em></p>
-      <button onClick={handleLike}>Like</button>
+      <button onClick={handleLike}>Like</button>&nbsp;
       <button onClick={handleDislike}>Dislike</button>
       <p>{count}</p>
       <hr/>

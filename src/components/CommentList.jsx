@@ -4,9 +4,7 @@ import PropTypes from 'prop-types';
 
 function CommentList(props) {
   var CommentListStyles = {
-    border: '2px solid gray',
-    padding: '10px',
-    backgroundColor: '#e6f2ff'
+    padding: '10px'
   };
 
   return (
