@@ -35,7 +35,6 @@ function Comment(props) {
 
 Comment.propTypes = {
   name: PropTypes.string.isRequired,
-  time: PropTypes.string.isRequired,
   comment: PropTypes.string,
   formattedElapsedTime: PropTypes.string.isRequired
 };
