@@ -9,7 +9,7 @@ function User (){
       <img src={susie}/>
       <style jsx>{`
           div {
-            background: linear-gradient(blue, white);
+            background: linear-gradient(#3377ff, white);
             padding: 10px;
             margin-right: 10px;
           }

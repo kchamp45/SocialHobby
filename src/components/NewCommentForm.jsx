@@ -4,14 +4,12 @@ import { v4 } from 'uuid';
 import Moment from 'moment';
 
 function NewCommentForm(props){
-  let _time = null;
   let _name = null;
   let _comment = null;
-  let vote = null;
 
   function handleNewCommentFormSubmission(event){
     event.preventDefault();
-    props.onNewCommentCreation({name: _name.value, comment: _comment.value, id: v4(), timePost: new Moment(), vote: 'like'});
+    props.onNewCommentCreation({name: _name.value, comment: _comment.value, id: v4(), timePost: new Moment()});
     _name.value = '';
     _comment.value = '';
   }

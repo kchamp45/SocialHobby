@@ -1,6 +1,5 @@
 import React from 'react';
 import NewCommentForm from './NewCommentForm';
-import Questions from './Questions';
 import PropTypes from 'prop-types';
 
 class NewCommentControl extends React.Component {

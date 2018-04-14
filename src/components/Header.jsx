@@ -8,7 +8,7 @@ function Header(){
     width: '83%',
     marginBottom: '30px',
     height: '200px',
-    backgroundImage: "url(" + crafts + ")"
+    backgroundImage: 'url(' + crafts + ')'
   };
   return (
     <div style={HeaderStyles}>

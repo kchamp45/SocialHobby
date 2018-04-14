@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 
 function CraftList() {
   var CraftListStyles = {
-    border: '2px solid gray',
     padding: '10px',
     margin: '10px 20px 10px 5px',
     backgroundColor: '#e6f2ff',

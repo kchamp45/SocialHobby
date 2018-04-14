@@ -5,7 +5,6 @@ import NavBar from './NavBar';
 import Search from './Search';
 import Tweets from './Tweets';
 import User from './User';
-import Biography from './Biography';
 import OtherUserList from './OtherUserList';
 import { Switch, Route } from 'react-router-dom';
 import Error404 from './Error404';
@@ -29,7 +28,7 @@ class App extends React.Component {
 
   handleAddingNewCommentToList(newComment) {
     var newMasterCommentList = this.state.masterCommentList.slice();
-    newComment.formattedElapsedTime = (newComment.timePost).fromNow(true)
+    newComment.formattedElapsedTime = (newComment.timePost).fromNow(true);
     newMasterCommentList.push(newComment);
     this.setState({masterCommentList: newMasterCommentList});
 
@@ -40,11 +39,11 @@ class App extends React.Component {
   }
 
   updateCommentElapsedTime() {
-    console.log("check");
+    console.log('check');
     let newMasterCommentList = this.state.masterCommentList.slice();
     newMasterCommentList.forEach((comment) =>
-    comment.formattedElapsedTime = (comment.timePost).fromNow(true));
-    this.setState({masterCommentList: newMasterCommentList})
+      comment.formattedElapsedTime = (comment.timePost).fromNow(true));
+    this.setState({masterCommentList: newMasterCommentList});
   }
 
   componentWillUnmount() {

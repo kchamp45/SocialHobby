@@ -6,9 +6,9 @@ function Tweets (){
   function handleEnterKeyPress(event) {
     if(event.key == 'Enter') {
       if(_tweet.value == 'hobby'){
-      alert(_tweet.value);
+        alert(_tweet.value);
       }else {
-      alert('Sorry no result match your term.  Try again.');
+        alert('Sorry no result match your term.  Try again.');
       }
       _tweet.value = '';
     }
@@ -24,12 +24,12 @@ function Tweets (){
   return (
     <div>
       <form onKeyPress={handleEnterKeyPress}>
-          <input
-            style={TweetStyles}
-            type='text'
-            id='tweet'
-            placeholder='Tweet'
-            ref={(input) => {_tweet = input;}}/>
+        <input
+          style={TweetStyles}
+          type='text'
+          id='tweet'
+          placeholder='Tweet'
+          ref={(input) => {_tweet = input;}}/>
       </form>
     </div>
   );
