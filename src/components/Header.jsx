@@ -4,11 +4,13 @@ import crafts from '../assets/images/crafts.jpeg';
 function Header(){
   var HeaderStyles = {
     textAlign: 'center',
-    color: 'blue',
-    width: '83%',
+    color: 'yellow',
+    width: '100%',
     marginBottom: '30px',
-    height: '200px',
-    backgroundImage: 'url(' + crafts + ')'
+    height: '250px',
+    backgroundImage: 'url(' + crafts + ')',
+    backgroundPosition: 'center',
+    backgroundSize: 'cover'
   };
   return (
     <div style={HeaderStyles}>
