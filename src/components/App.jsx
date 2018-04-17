@@ -21,9 +21,14 @@ class App extends React.Component {
       masterCommentList: [
       ],
       masterCraftList: [
-      ]
+      ],
+      likeCount: 0,
+      dislikeCount: 0
     };
+
     this.handleAddingNewCommentToList = this.handleAddingNewCommentToList.bind(this);
+    this.handleAddLikeCount = this.handleAddLikeCount.bind(this);
+    this.handleAddDislikeCount = this.handleAddDislikeCount.bind(this);
   }
 
   handleAddingNewCommentToList(newComment) {
@@ -31,7 +36,6 @@ class App extends React.Component {
     newComment.formattedElapsedTime = (newComment.timePost).fromNow(true);
     newMasterCommentList.push(newComment);
     this.setState({masterCommentList: newMasterCommentList});
-
   }
 
   componentDidMount() {
@@ -44,6 +48,16 @@ class App extends React.Component {
     newMasterCommentList.forEach((comment) =>
       comment.formattedElapsedTime = (comment.timePost).fromNow(true));
     this.setState({masterCommentList: newMasterCommentList});
+  }
+
+  handleAddLikeCount() {
+    let newLikeCount = this.state.likeCount + 1;
+    this.setState({likeCount: newLikeCount});
+  }
+
+  handleAddDislikeCount() {
+    let newDislikeCount = this.state.dislikeCount + 1;
+    this.setState({dislikeCount: newDislikeCount});
   }
 
   componentWillUnmount() {
@@ -83,7 +97,10 @@ class App extends React.Component {
           <div className="container2">
             <User/>
             <Switch>
-              <Route exact path='/' render={()=><CommentList commentList={this.state.masterCommentList} />} />
+              <Route exact path='/' render={()=><CommentList commentList={this.state.masterCommentList} likeCount={this.state.likeCount}
+              dislikeCount={this.state.dislikeCount}
+              updateLikeVote = {this.handleAddLikeCount}
+              updateDislikeVote = {this.handleAddDislikeCount}/>} />
               <Route path='/newcomment' render={()=><NewCommentControl onNewCommentCreation={this.handleAddingNewCommentToList}/>} />
               <Route path='/craft' component={CraftList}/>
               <Route path='/followers' component={FollowerList}/>
