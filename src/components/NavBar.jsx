@@ -6,12 +6,12 @@ function NavBar(){
     border: '2px solid gray',
     padding: '10px',
     color: 'gray',
-    backgroundColor: '#e6f7ff',
+    backgroundColor: '#e6f7ff'
   };
   return (
-    <nav>
-      <Link style={NavBarStyles} to="/">Home</Link> <Link style={NavBarStyles}  to="/newcomment">Add Comment</Link> <Link style={NavBarStyles} to="/craft">Craft Ideas</Link>
-    </nav>
+    <navbar>
+      <Link  style={NavBarStyles} to="/">Home</Link><Link style={NavBarStyles}  to="/newcomment">Add Comment</Link><Link  style={NavBarStyles} to="/craft">Craft Ideas</Link>
+    </navbar>
   );
 }
 

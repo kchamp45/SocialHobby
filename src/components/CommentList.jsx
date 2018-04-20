@@ -14,10 +14,10 @@ function CommentList(props) {
         <Comment formattedElapsedTime={comment.formattedElapsedTime}
           name={comment.name}
           comment={comment.comment}
-          likeCount={props.likeCount}
-          updateLikeVote={props.updateLikeVote}
+          selectedCommentLike={props.selectedCommentLike}
+          onLikeVote={props.onLikeVote}
           dislikeCount={props.dislikeCount}
-          updateDislikeVote={props.updateDislikeVote}
+          onDislikeVote={props.onDislikeVote}
           key={comment.id}/>
       )}
     </div>
@@ -26,10 +26,10 @@ function CommentList(props) {
 
 CommentList.propTypes = {
   commentList: PropTypes.array,
-  likeCount: PropTypes.number,
+  selectedCommentLike: PropTypes.number,
   dislikeCount: PropTypes.number,
-  updateLikeVote: PropTypes.func,
-  updateDislikeVote: PropTypes.func
+  onLikeVote: PropTypes.func,
+  onDislikeVote: PropTypes.func
 };
 
 export default CommentList;

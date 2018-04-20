@@ -22,7 +22,7 @@ class App extends React.Component {
       ],
       masterCraftList: [
       ],
-      likeCount: 0,
+      selectedCommentLike: 0,
       dislikeCount: 0
     };
 
@@ -34,6 +34,7 @@ class App extends React.Component {
   handleAddingNewCommentToList(newComment) {
     var newMasterCommentList = this.state.masterCommentList.slice();
     newComment.formattedElapsedTime = (newComment.timePost).fromNow(true);
+    newComment.likeCount = this.state.likeCount;
     newMasterCommentList.push(newComment);
     this.setState({masterCommentList: newMasterCommentList});
   }
@@ -50,9 +51,9 @@ class App extends React.Component {
     this.setState({masterCommentList: newMasterCommentList});
   }
 
-  handleAddLikeCount() {
-    let newLikeCount = this.state.likeCount + 1;
-    this.setState({likeCount: newLikeCount});
+  handleAddLikeCount(comment) {
+    comment = this.state.selectedCommentLike + 1;
+    this.setState({selectedCommentLike: comment});
   }
 
   handleAddDislikeCount() {
@@ -97,10 +98,10 @@ class App extends React.Component {
           <div className="container2">
             <User/>
             <Switch>
-              <Route exact path='/' render={()=><CommentList commentList={this.state.masterCommentList} likeCount={this.state.likeCount}
+              <Route exact path='/' render={()=><CommentList commentList={this.state.masterCommentList} selectedCommentLike={this.state.selectedCommentLike}
+              onLikeVote = {this.handleAddLikeCount}
               dislikeCount={this.state.dislikeCount}
-              updateLikeVote = {this.handleAddLikeCount}
-              updateDislikeVote = {this.handleAddDislikeCount}/>} />
+              onDislikeVote = {this.handleAddDislikeCount}/>} />
               <Route path='/newcomment' render={()=><NewCommentControl onNewCommentCreation={this.handleAddingNewCommentToList}/>} />
               <Route path='/craft' component={CraftList}/>
               <Route path='/followers' component={FollowerList}/>

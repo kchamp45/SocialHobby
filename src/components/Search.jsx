@@ -20,7 +20,7 @@ function Search () {
     border: '2px solid #0080ff',
     height: '25px',
     width: '300px',
-    marginLeft: '575px',
+    marginLeft: '300px',
     marginRight: '50px',
   };
 

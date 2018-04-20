@@ -9,7 +9,7 @@ function NewCommentForm(props){
 
   function handleNewCommentFormSubmission(event){
     event.preventDefault();
-    props.onNewCommentCreation({name: _name.value, comment: _comment.value, id: v4(), timePost: new Moment(), likeCount: 0});
+    props.onNewCommentCreation({name: _name.value, comment: _comment.value, id: v4(), timePost: new Moment(), likeCount: 0, disLikeCount: 0});
     _name.value = '';
     _comment.value = '';
   }

@@ -21,10 +21,10 @@ function Comment(props) {
       <h4>{props.formattedElapsedTime}</h4>
       <h3>{props.name}</h3>
       <p><em>{props.comment}</em></p>
-      <button onClick={props.updateLikeVote}>Like</button>&nbsp;
-      <p>{props.likeCount}</p>
-      <button onClick={props.updateDislikeVote}>Dislike</button>&nbsp;
-      <p>{props.dislikeCount}</p>
+      <p><button onClick={() =>{props.onLikeVote({formattedElapsedTime: props.formattedElapsedTime, name: props.name, comment: props.comment});}}>Like</button>&nbsp;&nbsp;
+      <span>{props.selectedCommentLike}</span></p>
+      <p><button onClick={props.onDislikeVote}>DisLike</button>&nbsp;&nbsp;
+      <span>{props.dislikeCount}</span></p>
       <hr/>
     </div>
   );
@@ -36,8 +36,8 @@ Comment.propTypes = {
   formattedElapsedTime: PropTypes.string.isRequired,
   likeCount: PropTypes.number,
   dislikeCount: PropTypes.number,
-  updateLikeVote: PropTypes.func,
-  updateDislikeVote: PropTypes.func
+  onLikeVote: PropTypes.func,
+  onDislikeVote: PropTypes.func
 };
 
 export default Comment;
