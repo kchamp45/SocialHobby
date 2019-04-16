@@ -8,7 +8,7 @@
 
 Welcome to an amazing application for sharing your favorite hobbies!  This application allows you to share hobby and decorating ideas and interact with other hobbyists in real time, just like Facebook, but for serious hobby enthusiasts!
 
-![app-screenshot](https://github.com/kchamp45/SocialHobby/blob/master/app/src/assets/images/crafts.jpeg?raw=true)
+![app-screenshot](https://github.com/kchamp45/SocialHobby/blob/master/src/assets/images/crafts.jpeg?raw=true)
 
 ## Setup/Installation Requirements
 
